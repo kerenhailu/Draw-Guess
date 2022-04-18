@@ -1,4 +1,4 @@
-// import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Link, Route,Switch,Router } from "react-router-dom";
 import Footer from "../Features/Footer/footer-component";
 import Navbar from "../Features/Navbar/navbar-component";
 import Draw from "../Pages/Draw/draw-component";
@@ -11,8 +11,6 @@ const PageRouting = () => {
 
   return (
     <div> 
-
-      
       {/* <BrowserRouter>
      <Navbar/>
         <Routes>
@@ -25,6 +23,39 @@ const PageRouting = () => {
         <Footer/>
       </BrowserRouter> */}
 
+
+
+
+
+      <BrowserRouter>
+
+      <div>
+        
+            <Link to="/">Home</Link>
+        
+            <Link to="/guess">Guess</Link>
+         
+            <Link to="/draw">Draw</Link>
+            <Link to="/words">Words</Link>
+      <Link to="/waiting">Waiting</Link>
+
+        <Switch>
+          <Route path="/guess">
+            <Guess />
+          </Route>
+          <Route path="/draw">
+            <Draw />
+          </Route>
+          <Route path="/">
+            <Home />
+            <Route path="/waiting">
+            <Waiting /> </Route>
+            <Route path="/words">
+            <Words /> </Route>
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
 
      </div> 
   );

@@ -5,6 +5,7 @@ const User = new schema(
     firstName: { type: String, required: true },
     lastName: { type: String, required: true },
     points:{ type: Number },
+    isAdmin:{ type: Boolean },
     password: { type: String, required: true },
   },
   { timestamps: true }

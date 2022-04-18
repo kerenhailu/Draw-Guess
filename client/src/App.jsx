@@ -10,9 +10,9 @@ import Words from './Components/Pages/Words/words-component';
 function App() {
   return (
     <div className="App">
-      {/* <PageRouting/> */}
+      <PageRouting/>
       {/* <Home/> */}
-      <Draw/>
+      {/* <Draw/> */}
       {/* <Guess/> */}
       {/* <Words/> */}
     </div>
